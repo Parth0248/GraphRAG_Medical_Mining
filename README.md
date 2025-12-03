@@ -1480,6 +1480,7 @@ GraphRAG_Medical_Mining/
 ├── docs/                           # Documentation
 │   ├── SETUP.md                   # Installation guide
 │   ├── API.md                     # API documentation
+│   ├── ARCHITECTURE.md           # System Architecture & Data Flow
 │   ├── CRISP_DM.md               # Methodology
 │   ├── EVALUATION.md             # Metrics explanation
 │   └── WALKTHROUGH.md            # End-to-End User Guide (with screenshots)

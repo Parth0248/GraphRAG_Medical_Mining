@@ -1156,111 +1156,67 @@ We applied several optimizations to achieve production-grade performance:
 
 ### Architecture
 
-Our deployment uses a free, scalable architecture:
+Our deployment uses a robust, scalable serverless architecture:
 
 ```
-User Interface (Streamlit Cloud) → FastAPI Backend (Hugging Face Spaces) 
+User Interface (Firebase Hosting) → Google Cloud Run (Docker Container)
     ↓                                      ↓
     ↓                              Neo4j Aura Free Tier
     ↓                                      ↓
-    ↓                              FAISS (In-Memory)
-    ↓                                      ↓
-Groq API (Llama-3.1-70B - FREE)    BioBERT (HuggingFace)
+    ↓                              Groq API (Llama-3.1-70B)
 ```
 
-### Free Deployment Services
+### Deployment Services
 
-#### 1. Frontend: Streamlit Community Cloud
-- **Cost:** FREE (unlimited public apps)
-- **Specs:** 1 GB RAM, 1 vCPU
-- **URL:** https://[your-app].streamlit.app
-- **Uptime:** 99.5% SLA
+#### 1. Frontend & Hosting: Firebase Hosting
+- **Role**: Provides the global CDN, SSL, and custom domain.
+- **Configuration**: Rewrites all traffic to the Cloud Run service.
 
-#### 2. Backend: Hugging Face Spaces
-- **Cost:** FREE (with waiting queue)
-- **Alternative:** Render.com free tier (750 hours/month)
-- **Specs:** 2 GB RAM, 2 vCPU
-- **Persistent storage:** 10 GB
+#### 2. Application Server: Google Cloud Run
+- **Role**: Hosts the Streamlit application in a Docker container.
+- **Specs**: Python 3.10 Slim, auto-scaling (0 to N instances).
+- **Security**: Environment variables for API keys (Neo4j, Groq) are securely managed.
 
 #### 3. Graph Database: Neo4j Aura Free Tier
-- **Cost:** FREE
-- **Specs:** 200MB storage, 1M nodes, 4M relationships
-- **Limitations:** Our graph (10K nodes) fits comfortably
-- **Note:** Sleeps after 3 days inactivity (wakes in 30s)
+- **Cost**: FREE
+- **Specs**: 1M nodes, 4M relationships.
+- **Role**: Stores the medical knowledge graph.
 
-#### 4. Vector Database: FAISS (Self-Hosted)
-- **Cost:** FREE (open source)
-- **Storage:** Load into memory on startup (~45MB)
-- **Alternative:** Qdrant Cloud free tier (1GB)
-
-#### 5. LLM: Groq API
-- **Cost:** 100% FREE (14,400 requests/day, 30 requests/minute)
-- **Models:** Llama-3.1-70B, Mixtral-8x7B, Gemma-7B
-- **Speed:** Ultra-fast inference (up to 800 tokens/sec)
-- **No credit card required**
-- **Alternative:** Hugging Face Inference API (free, slower)
+#### 4. LLM: Groq API
+- **Cost**: FREE (14,400 requests/day)
+- **Model**: Llama-3.1-70B
+- **Role**: Generates natural language answers using graph context.
 
 ### Deployment Script
 
-See `deployment/deploy.sh` for complete automation:
+We use a PowerShell script `deploy_to_firebase.ps1` for one-click deployment:
 
-```bash
-#!/bin/bash
-# One-click deployment script
+```powershell
+# 1. Set Project & Enable Services
+gcloud config set project graphrag-medical-ai-v1
+gcloud services enable run.googleapis.com cloudbuild.googleapis.com
 
-# 1. Setup Neo4j Aura
-echo "Setting up Neo4j Aura..."
-# Follow instructions at: https://neo4j.com/cloud/aura-free/
+# 2. Build Docker Container
+gcloud builds submit --tag gcr.io/graphrag-medical-ai-v1/graphrag-medical
 
-# 2. Deploy FastAPI to Hugging Face Spaces
-echo "Deploying backend..."
-cd backend/
-huggingface-cli login
-huggingface-cli repo create graphrag-backend --type space --space_sdk gradio
-git push https://huggingface.co/spaces/[username]/graphrag-backend
+# 3. Deploy to Cloud Run
+gcloud run deploy graphrag-medical --image gcr.io/... --set-env-vars NEO4J_URI=...,GROQ_API_KEY=...
 
-# 3. Deploy Streamlit App
-echo "Deploying frontend..."
-cd ../frontend/
-streamlit deploy app.py
-
-# 4. Environment Variables
-echo "Don't forget to set:"
-echo "- NEO4J_URI"
-echo "- NEO4J_USERNAME"
-echo "- NEO4J_PASSWORD"
-echo "- OPENAI_API_KEY"
-```
-
-### Monitoring
-
-**Free Monitoring Tools:**
-
-1. **Uptime Robot** (free tier): 50 monitors, 5-min intervals
-2. **Streamlit Analytics**: Built-in visitor stats
-3. **OpenAI Usage Dashboard**: Track API consumption
-4. **Custom Logging**: Store to JSON files
-
-```python
-import logging
-logging.basicConfig(
-    filename='logs/app.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+# 4. Deploy Firebase Hosting
+firebase deploy --only hosting
 ```
 
 ### Cost Analysis (Monthly)
 
-| Service | Free Tier | Estimated Usage | Cost |
-|---------|-----------|-----------------|------|
-| Streamlit Cloud | Unlimited | 1 app | $0 |
-| Hugging Face Spaces | Unlimited | 1 space | $0 |
-| Neo4j Aura | 200 MB | 50 MB | $0 |
-| Groq API | 14,400 req/day | Unlimited free | **$0** |
-| **Total** | - | - | **$0/month** |
+| Service | Tier | Cost |
+|---------|------|------|
+| Firebase Hosting | Spark (Free) | $0 |
+| Google Cloud Run | Free Tier (2M requests) | $0 |
+| Neo4j Aura | Free Tier | $0 |
+| Groq API | Free Beta | $0 |
+| **Total** | | **$0/month** |
 
-**Note:** 100% FREE deployment with Groq API! No credit card needed.
+**Note:** The system is designed to be 100% free for standard usage.
 
 ---
 
@@ -1500,6 +1456,7 @@ GraphRAG_Medical_Mining/
 │   ├── graph_construction/          # Neo4j graph builder
 │   ├── retrieval/                   # Hybrid retrieval
 │   ├── generation/                  # LLM wrapper
+│   ├── mlops/                       # MLOps Pipeline (Ingestion, Training, Drift)
 │   ├── evaluation/                  # Metrics
 │   └── utils/                       # Helpers
 │
@@ -1524,7 +1481,8 @@ GraphRAG_Medical_Mining/
 │   ├── SETUP.md                   # Installation guide
 │   ├── API.md                     # API documentation
 │   ├── CRISP_DM.md               # Methodology
-│   └── EVALUATION.md             # Metrics explanation
+│   ├── EVALUATION.md             # Metrics explanation
+│   └── WALKTHROUGH.md            # End-to-End User Guide (with screenshots)
 │
 ├── tests/                         # Unit tests
 │   ├── test_retrieval.py

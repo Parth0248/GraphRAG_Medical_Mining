@@ -1,0 +1,62 @@
+[
+  {
+    "pmid": "10001",
+    "title": "Management of Type 2 Diabetes Mellitus",
+    "abstract": "Metformin is recommended as first-line pharmacological therapy for type 2 diabetes mellitus. \n            Patients typically present with polyuria, polydipsia, and unexplained weight loss. Blood glucose levels above 126 mg/dL \n            indicate diabetes. Metformin reduces hepatic glucose production and improves insulin sensitivity. Common side effects \n            include nausea and diarrhea. Alternative treatments include sulfonylureas and insulin therapy.",
+    "year": "2023"
+  },
+  {
+    "pmid": "10002",
+    "title": "Hypertension: Guidelines and Treatment Strategies",
+    "abstract": "Hypertension affects approximately 30% of adults worldwide. Blood pressure readings above 140/90 mmHg \n            warrant treatment. First-line therapies include ACE inhibitors like lisinopril and ARBs. Calcium channel blockers \n            and thiazide diuretics are also effective. Patients may experience headaches, dizziness, and blurred vision. \n            Lifestyle modifications include reduced sodium intake and regular exercise.",
+    "year": "2023"
+  },
+  {
+    "pmid": "10003",
+    "title": "Asthma Pathophysiology and Current Treatments",
+    "abstract": "Asthma is characterized by airway inflammation and bronchospasm. Common symptoms include wheezing, \n            shortness of breath, and chest tightness. Albuterol is a short-acting beta-agonist used for acute symptoms. \n            Inhaled corticosteroids provide long-term control. Environmental triggers include allergens, cold air, and exercise. \n            Peak flow monitoring helps assess asthma control.",
+    "year": "2024"
+  },
+  {
+    "pmid": "10004",
+    "title": "Cardiovascular Disease Prevention",
+    "abstract": "Cardiovascular disease remains the leading cause of mortality globally. Risk factors include \n            hypertension, diabetes, smoking, and hyperlipidemia. Aspirin provides antiplatelet effects for secondary prevention. \n            Statins like atorvastatin reduce LDL cholesterol. Symptoms of myocardial infarction include chest pain, dyspnea, \n            and diaphoresis. Emergency treatment involves aspirin, nitroglycerin, and urgent cardiac catheterization.",
+    "year": "2023"
+  },
+  {
+    "pmid": "10005",
+    "title": "Depression and Anxiety Disorders",
+    "abstract": "Major depressive disorder affects millions worldwide. Symptoms include persistent sadness, anhedonia, \n            and sleep disturbances. First-line treatments are SSRIs like sertraline and fluoxetine. Cognitive behavioral therapy \n            shows efficacy comparable to medication. Generalized anxiety disorder presents with excessive worry and restlessness. \n            Benzodiazepines provide short-term anxiety relief but carry addiction risk.",
+    "year": "2024"
+  },
+  {
+    "pmid": "10006",
+    "title": "Chronic Obstructive Pulmonary Disease Management",
+    "abstract": "COPD is primarily caused by cigarette smoking. Patients present with chronic cough, sputum production, \n            and progressive dyspnea. Spirometry shows irreversible airflow obstruction. Long-acting bronchodilators improve symptoms. \n            Inhaled corticosteroids reduce exacerbation frequency. Smoking cessation is the most effective intervention. \n            Oxygen therapy benefits patients with severe hypoxemia.",
+    "year": "2023"
+  },
+  {
+    "pmid": "10007",
+    "title": "Rheumatoid Arthritis: Diagnosis and Treatment",
+    "abstract": "Rheumatoid arthritis is an autoimmune disease causing joint inflammation. Patients experience morning \n            stiffness, joint swelling, and pain. Rheumatoid factor and anti-CCP antibodies aid diagnosis. Methotrexate is the \n            anchor drug for treatment. Biologic agents like TNF inhibitors show excellent efficacy. NSAIDs like ibuprofen provide \n            symptomatic relief. Early aggressive treatment prevents joint destruction.",
+    "year": "2024"
+  },
+  {
+    "pmid": "10008",
+    "title": "Migraine Headache: Pathophysiology and Management",
+    "abstract": "Migraine is a neurovascular disorder causing severe headache. Symptoms include unilateral throbbing pain, \n            photophobia, and nausea. Triptans like sumatriptan are effective abortive treatments. Preventive medications include \n            beta-blockers and topiramate. Aura may precede headache onset. Triggers include stress, certain foods, and hormonal \n            changes. Chronic migraine may require CGRP antagonists.",
+    "year": "2023"
+  },
+  {
+    "pmid": "10009",
+    "title": "Gastroesophageal Reflux Disease Treatment",
+    "abstract": "GERD results from lower esophageal sphincter dysfunction. Patients report heartburn, regurgitation, \n            and dysphagia. Proton pump inhibitors like omeprazole effectively reduce acid production. H2 blockers provide \n            alternative therapy. Lifestyle modifications include elevating the head of bed and avoiding trigger foods. \n            Chronic GERD increases risk of Barrett's esophagus.",
+    "year": "2024"
+  },
+  {
+    "pmid": "10010",
+    "title": "Hypothyroidism: Clinical Features and Treatment",
+    "abstract": "Hypothyroidism results from insufficient thyroid hormone production. Common symptoms include fatigue, \n            weight gain, cold intolerance, and constipation. TSH elevation confirms diagnosis. Levothyroxine replacement is \n            standard treatment. Hashimoto's thyroiditis is the most common cause. Monitoring TSH levels ensures adequate \n            replacement. Untreated hypothyroidism may cause myxedema coma.",
+    "year": "2023"
+  }
+]

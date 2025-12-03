@@ -1,0 +1,10 @@
+artifact_location: file:///D:/SJSU/Fall25/Data%20Mining/Project/GraphRAG_Medical_Mining/mlruns/233261698972975784/models/m-380e823f243e49deb856c4ec661bc0b0/artifacts
+creation_timestamp: 1764743349194
+experiment_id: '233261698972975784'
+last_updated_timestamp: 1764743366444
+model_id: m-380e823f243e49deb856c4ec661bc0b0
+model_type: null
+name: model
+source_run_id: bc8add532cc44e3cbf1b1f730759c8dc
+status: 2
+status_message: null

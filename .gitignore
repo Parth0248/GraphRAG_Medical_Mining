@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# Project specific
+data/raw/*.zip
+*.log
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Deployment
+.firebaserc
+firebase.json
+deploy_to_firebase.ps1

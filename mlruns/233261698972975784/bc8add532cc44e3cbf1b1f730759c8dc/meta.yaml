@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/SJSU/Fall25/Data%20Mining/Project/GraphRAG_Medical_Mining/mlruns/233261698972975784/bc8add532cc44e3cbf1b1f730759c8dc/artifacts
+end_time: 1764743366490
+entry_point_name: ''
+experiment_id: '233261698972975784'
+lifecycle_stage: active
+run_id: bc8add532cc44e3cbf1b1f730759c8dc
+run_name: LGBM_31_0.05
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1764743347982
+status: 3
+tags: []
+user_id: parth

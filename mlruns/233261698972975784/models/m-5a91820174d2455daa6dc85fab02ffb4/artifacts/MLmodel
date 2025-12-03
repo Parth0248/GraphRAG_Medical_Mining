@@ -1,0 +1,21 @@
+artifact_path: file:///D:/SJSU/Fall25/Data%20Mining/Project/GraphRAG_Medical_Mining/mlruns/233261698972975784/models/m-5a91820174d2455daa6dc85fab02ffb4/artifacts
+flavors:
+  lightgbm:
+    code: null
+    data: model.lgb
+    lgb_version: 4.6.0
+    model_class: lightgbm.basic.Booster
+  python_function:
+    data: model.lgb
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.13.3
+mlflow_version: 3.6.0
+model_id: m-5a91820174d2455daa6dc85fab02ffb4
+model_size_bytes: 290575
+model_uuid: m-5a91820174d2455daa6dc85fab02ffb4
+prompts: null
+run_id: d6fc4d05891947afaf7964896f601e8f
+utc_time_created: '2025-12-03 06:29:38.533898'

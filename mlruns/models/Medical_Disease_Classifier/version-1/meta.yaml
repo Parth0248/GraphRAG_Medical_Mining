@@ -1,0 +1,15 @@
+creation_timestamp: 1764743428631
+current_stage: Production
+deployment_job_state: null
+description: null
+last_updated_timestamp: 1764743428735
+model_id: null
+name: Medical_Disease_Classifier
+run_id: bc8add532cc44e3cbf1b1f730759c8dc
+run_link: null
+source: runs:/bc8add532cc44e3cbf1b1f730759c8dc/model
+status: READY
+status_message: null
+storage_location: runs:/bc8add532cc44e3cbf1b1f730759c8dc/model
+user_id: null
+version: 1

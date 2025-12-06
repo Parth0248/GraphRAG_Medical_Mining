@@ -7,14 +7,14 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=Streamlit&logoColor=white)](https://streamlit.io)
 
 ## Authors
-- **Team Member 1** - Data Collection & Preprocessing
-- **Team Member 2** - Graph Construction & RAG Pipeline
-- **Team Member 3** - Model Evaluation & Visualization
-- **Team Member 4** - Deployment & Frontend Development
+- **Kalhar Mayurbhai Patel** - Lead ML Engineer
+- **Michael Kennedy** - Infrastructure & Deployment Engineer
+- **Yu Hsuan Lee** - System Analyst & Backend Developer
+- **Parth Maradia** - AI Engineer
 
 **Course:** CMPE 255 - Data Mining  
 **Institution:** San Jose State University  
-**Date:** December 2024
+**Date:** December 2025
 
 ---
 
@@ -27,11 +27,11 @@ This project presents a novel Graph-based Retrieval-Augmented Generation (GraphR
 ---
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Related Work](#related-work)
-3. [Data](#data)
-4. [Methods](#methods)
-5. [Experiments and Results](#experiments-and-results)
+1. [Introduction](#introduction-10)
+2. [Related Work](#related-work-10)
+3. [Data](#data-10)
+4. [Methods](#methods-30)
+5. [Experiments and Results](#experiments-and-results-30)
 6. [Deployment](#deployment)
 7. [Conclusion](#conclusion)
 8. [Installation & Usage](#installation--usage)
@@ -1529,7 +1529,7 @@ GraphRAG_Medical_Mining/
 
 ## License
 
-MIT License - see LICENSE file for details.
+[MIT License](LICENSE) - see LICENSE file for details.
 
 ---
 
@@ -1552,21 +1552,12 @@ If you use this code or methodology in your research, please cite:
 ## Acknowledgments
 
 - **Course**: CMPE 255 - Data Mining, San Jose State University
-- **Instructor**: [Professor Name]
+- **Instructor**: Vijay Eranti
 - **Data Sources**: PubMed, Kaggle, DrugBank
 - **Tools**: Neo4j, Hugging Face, OpenAI, Streamlit
 - **Inspiration**: Microsoft GraphRAG, BioGPT, PrimeKG
 
 ---
 
-## Contact
-
-For questions or collaboration:
-- **Email**: [team-email]@sjsu.edu
-- **GitHub**: [github.com/username]
-- **Demo**: [your-app.streamlit.app]
-
----
-
-**Last Updated**: December 2024  
+**Last Updated**: December 2025
 **Version**: 1.0.0

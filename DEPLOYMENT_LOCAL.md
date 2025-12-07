@@ -268,7 +268,7 @@ The default entry point is `deployment/streamlit/app_final.py`, which provides t
 To use a different entry point, modify the `CMD` line in the Dockerfile:
 
 ```dockerfile
-CMD ["streamlit", "run", "deployment/streamlit/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "deployment/streamlit/app.py", "--server.port", "8501", "--server.address", "0.0.0.0"]
 ```
 
 Then rebuild the image.

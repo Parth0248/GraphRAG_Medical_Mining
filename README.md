@@ -16,7 +16,10 @@
 **Institution:** San Jose State University  
 **Date:** December 2025
 
-## Demo Video : [Link](https://youtu.be/ic_f_fd1T0w)
+## Link
+- [Presentation Slides](https://docs.google.com/presentation/d/1yjDEVizitmfjlhgyi2-Y2tTJTqy54JNLdfOyeCUNJU0/edit?usp=sharing)
+- [Demo Video](https://www.youtube.com/watch?v=ic_f_fd1T0w)
+- [Final Project Report](https://docs.google.com/document/d/1hyr1jVA5kfndlM_EnFkTL0KSE2LDXDoT8MkLBIup3Og/edit?usp=sharing)
 
 ## Abstract
 
@@ -1556,5 +1559,8 @@ If you use this code or methodology in your research, please cite:
 - **Data Sources**: PubMed, Kaggle, DrugBank
 - **Tools**: Neo4j, Hugging Face, OpenAI, Streamlit
 - **Inspiration**: Microsoft GraphRAG, BioGPT, PrimeKG
-- **Presentation Slides**: {https://docs.google.com/presentation/d/1yjDEVizitmfjlhgyi2-Y2tTJTqy54JNLdfOyeCUNJU0/edit?usp=sharing}
+
 ---
+
+**Last Updated**: December 2025
+**Version**: 1.0.0

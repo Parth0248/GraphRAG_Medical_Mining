@@ -1538,7 +1538,7 @@ GraphRAG_Medical_Mining/
 If you use this code or methodology in your research, please cite:
 
 ```bibtex
-@software{graphrag_medical_2024,
+@software{graphrag_medical_2025,
   author = {[Team Member 1], [Team Member 2], [Team Member 3], [Team Member 4]},
   title = {GraphRAG for Medical Data Mining: A Hybrid Retrieval-Augmented Generation Approach},
   year = {2024},
@@ -1556,6 +1556,9 @@ If you use this code or methodology in your research, please cite:
 - **Data Sources**: PubMed, Kaggle, DrugBank
 - **Tools**: Neo4j, Hugging Face, OpenAI, Streamlit
 - **Inspiration**: Microsoft GraphRAG, BioGPT, PrimeKG
+- **Presentation Slides**: {https://docs.google.com/presentation/d/1yjDEVizitmfjlhgyi2-Y2tTJTqy54JNLdfOyeCUNJU0/edit?usp=sharing}
+- **Demo Video**: {}
+- **Final Project Report**: {}
 
 ---
 
